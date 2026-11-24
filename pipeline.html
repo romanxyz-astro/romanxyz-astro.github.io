@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="The RomanXYZ pipeline: from Roman WFI grism count-rate images to calibrated spectra, redshifts, emission-line maps and kinematic stamps." />
+        <meta name="description" content="RomanXYZ science tools: the grism analysis pipeline we develop for our Roman science programs, with spectral extraction, redshifts, emission-line maps and kinematic analysis." />
         <meta name="author" content="RomanXYZ team" />
-        <title>Pipeline - RomanXYZ</title>
+        <title>Science Tools - RomanXYZ</title>
         <link rel="canonical" href="https://romanxyz.org/pipeline.html" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Pipeline - RomanXYZ" />
-        <meta property="og:description" content="From Roman WFI grism count-rate images to calibrated spectra, redshifts, emission-line maps and kinematic stamps." />
+        <meta property="og:title" content="Science Tools - RomanXYZ" />
+        <meta property="og:description" content="The grism analysis pipeline we develop for our Roman science programs." />
         <meta property="og:url" content="https://romanxyz.org/pipeline.html" />
         <meta property="og:image" content="https://romanxyz.org/assets/img/romanxyz/pipeline_one_sca.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -103,9 +103,9 @@
         <!-- Page header: a simulated Roman G150 grism exposure (Wang et al. 2022, SCA 9)-->
         <header class="page-header text-center">
             <div class="container">
-                <h1 class="text-uppercase text-white mb-3">Pipeline</h1>
+                <h1 class="text-uppercase text-white mb-3">Science Tools</h1>
                 <p class="text-white-50 mx-auto mb-4" style="max-width: 700px; font-size: 1.1rem;">
-                    From count-rate images to calibrated spectra, redshifts, emission-line maps and kinematic stamps for every source in the field.
+                    The RomanXYZ grism pipeline supports our Roman science programs with spectral extraction, redshift measurements, emission-line mapping and kinematic analysis.
                 </p>
                 <a class="btn btn-primary btn-sm mx-1 mb-2 js-scroll-trigger" href="#steps">Steps</a>
                 <a class="btn btn-primary btn-sm mx-1 mb-2 js-scroll-trigger" href="#validation">Validation</a>
@@ -117,12 +117,12 @@
             <div class="container">
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-9 text-center">
-                        <h2 class="text-black mb-4">From rate images to science</h2>
+                        <h2 class="text-black mb-4">The RomanXYZ grism pipeline</h2>
                         <p class="text-black-50">
                             The <b>Roman Wide Field Instrument</b> carries a slitless <b>G150 grism</b> covering 1.00&ndash;1.93 &mu;m at a wavelength-dependent resolving power of R = 461 &lambda;/&mu;m (about 460&ndash;890 across the band). Every exposure records the spectrum of every source on 18 detectors at once, with no target pre-selection. This spectroscopy is a core component of the <b>High-Latitude Wide-Area Survey</b>, which will measure redshifts from H&alpha; (z = 0.5&ndash;1.9), [O&nbsp;III] (z = 1.0&ndash;2.9) and [O&nbsp;II] (z = 1.7&ndash;4.2) over thousands of square degrees.
                         </p>
                         <p class="text-black-50">
-                            The <b>RomanXYZ</b> pipeline reduces these data. It starts from count-rate (L2) images and produces source catalogs, flux-calibrated 2-D and 1-D spectra with exact error and covariance propagation, contamination models, emission-line redshifts, emission-line maps, and per-exposure <b>kinematic stamps</b> for rotation-curve and kinematic-lensing studies. The step sequence, products and command-line interface follow the JWST/NIRCam slitless reduction, adapted to Roman. Traces and sensitivities come from the inflight optical model.
+                            We develop the <b>RomanXYZ</b> grism pipeline for the analyses in our science programs, building on our experience with JWST imaging and slitless spectroscopy. Starting from count-rate (L2) images, it produces source catalogs, flux-calibrated 2-D and 1-D spectra with exact error and covariance propagation, contamination models, emission-line redshifts, emission-line maps, and per-exposure <b>kinematic stamps</b> for rotation-curve and kinematic-lensing studies. The step sequence, products and command-line interface follow the JWST/NIRCam slitless reduction, adapted to Roman. Traces and sensitivities come from the inflight optical model.
                         </p>
                         <p class="text-black-50 mb-0">
                             One command, <code>romanxyz reduce</code>, runs the full chain. Every step writes a status table and can be re-run on its own.
@@ -161,7 +161,7 @@
                     <div class="col-md-4 mb-4">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body">
-                                <h3 class="card-title h4">Honest uncertainties</h3>
+                                <h3 class="card-title h4">Propagated uncertainties</h3>
                                 <p class="card-text text-black-50">Exact noise and covariance propagation from pixels to 1-D spectra, a contamination model with its own uncertainty, and per-exposure wavelength uncertainties from the trace zero point and source position.</p>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row"><span class="stat-number">97%</span></th>
-                                    <td>Redshift purity for clean, high-probability sources, from only 2 &times; 301 s exposures, using line templates and a photo-z prior</td>
+                                    <td>Redshift purity for clean, high-probability sources, from 2 &times; 301 s exposures, using line templates and a photo-z prior</td>
                                 </tr>
                             </tbody>
                         </table>
